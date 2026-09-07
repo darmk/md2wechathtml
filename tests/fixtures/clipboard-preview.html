@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>文序 · 富文本粘贴回归</title>
+  <style>
+    body { margin: 24px; color: #333; background: #f3f0e9; font: 14px/1.6 sans-serif; }
+    .panels { display: flex; align-items: flex-start; gap: 24px; }
+    .receiver { box-sizing: border-box; min-height: 520px; padding: 20px; background: white; border: 1px solid #ddd; }
+    .mobile { width: 375px; }
+    .desktop { width: 760px; }
+    /* Deliberately different host defaults. This is NOT WeChat's sanitizer or
+       an official emulator; it tests clipboard transfer and style isolation. */
+    .receiver code { display: block; margin: 12px 0; padding: 8px; background: #eee; }
+    .receiver ul, .receiver ol { list-style: none; padding: 0; }
+    .receiver li { line-height: 2.5; font-size: 18px; }
+    .receiver p { margin: 24px 0; }
+    .receiver strong { color: red; }
+    .receiver th, .receiver td { text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>富文本粘贴回归</h1>
+  <p>在文序复制富文本，再分别粘贴到下方。用于检查剪贴板传输、默认样式冲突与宽度变化，不代表公众号发布实测。</p>
+  <div class="panels">
+    <section><h2>手机 · 375 px</h2><article class="receiver mobile" contenteditable="true" role="textbox" aria-label="手机粘贴区域"></article></section>
+    <section><h2>PC · 760 px</h2><article class="receiver desktop" contenteditable="true" role="textbox" aria-label="PC 粘贴区域"></article></section>
+  </div>
+</body>
+</html>

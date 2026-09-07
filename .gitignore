@@ -1,0 +1,56 @@
+# Dependencies (keep package.json and package-lock.json tracked)
+node_modules/
+.pnp.*
+.npm/
+.pnpm-store/
+
+# Generated builds, deployment ZIPs and framework caches
+/dist/
+/out/
+/build/
+/.next/
+/.vinext/
+/.vite/
+/.cache/
+*.tsbuildinfo
+next-env.d.ts
+
+# Test output
+/coverage/
+/test-results/
+/playwright-report/
+
+# Local credentials (sanitized templates can be committed)
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Local logs and temporary files
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+/tmp/
+/temp/
+/outputs/
+
+# Machine-specific hosting and agent workspace metadata
+/.openai/
+/.wrangler/
+/.vercel/
+/.codex/
+/.agents/
+
+# Editor / OS metadata
+/.idea/
+/.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
